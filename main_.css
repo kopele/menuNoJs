@@ -1,0 +1,41 @@
+/*@nedov cod new task, 
+@we heve do native css menu in center dyspley, no javascript!*/
+body{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color:antiquewhite;
+}
+ ul {
+    width: 290px; /* The width of the menu */
+    margin: 0 auto;
+    list-style: none; /* To remove the list markers */
+    padding: 0; /* Remove the box around the text */
+    font-family: Arial, sans-serif; /* Chopped font for menu text */
+    font-size: 10pt; /* The size of the names in the menu */
+   }
+   li{
+    float:left;
+     }
+   li ul {
+    position: absolute; /* Submenus are positioned absolutely */
+    display: none; /* Hide submenu*/
+    margin-top: 1px; /* Move the submenu up */
+   }
+   li a {
+    display: block; /* The link as a block element */
+    padding: 5px; /* The boxes around the labels */
+    text-decoration: none; /* Underline from links remove */
+    color: #666; /* The color of the text */
+    border: 1px solid #ccc;/* The frame around the menu items*/
+    background-color: #f0f0f0; /* Background color */
+   }
+   .rows > li{
+       float:none !important;
+       width:100px !important;
+   }
+   li a:hover {
+    color: #ffe; /* Text color of active item */
+    background-color: #5488af; /* Background color of active item */
+   }
+   li:hover ul { 
+    display: block; /* When you select the item the mouse cursor is displayed submenu*/
+   }
