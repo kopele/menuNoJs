@@ -1,4 +1,10 @@
-﻿*{
+﻿/*COLOR*/
+@base-text: #666666;
+@gab-border:#a3a3a3;
+@base-bag: #f0f0f0;
+@base-akcent: #5488af;
+
+*{
     margin:0;
     padding:0;
 }
@@ -13,6 +19,7 @@ ul {
     padding: 0; /* Remove the box around the text */
     font-family: Arial, sans-serif; /* Chopped font for menu text */
     font-size: 10pt;
+    margin-top: 2px;
 
     li {
         float: left;
@@ -20,16 +27,29 @@ ul {
         ul {
             position: absolute; /* Submenus are positioned absolutely */
             display: none; /* Hide submenu*/
-            margin-top: 1px; /* Move the submenu up */
+            margin-top: 0.5px; /* Move the submenu up */
         }
 
         a {
             display: block; /* The link as a block element */
             padding: 5px; /* The boxes around the labels */
             text-decoration: none; /* Underline from links remove */
-            color: #666; /* The color of the text */
-            border: 1px solid #ccc; /* The frame around the menu items*/
-            background-color: #f0f0f0; /* Background color */
+            color: @base-text; /* The color of the text */
+            border: 1px solid @gab-border; /* The frame around the menu items*/
+            background-color: @base-bag; /* Background color */
+            &:hover {
+                color: @base-bag; /* Text color of active item */
+                background-color: @base-akcent; /* Background color of active item */
+            }
         }
+
+        &:hover ul {
+            display: block; /* When you select the item the mouse cursor is displayed submenu*/
+        }
+    }
+
+    .rows li {
+        float: none !important;
+        width: 100px !important;
     }
 }
