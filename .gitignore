@@ -1,2 +1,6 @@
-# no Web.config
+# no Web.config AND ELSE...
+*.gitignore
+*.config
+*.json
+*.defaults
 *.config
